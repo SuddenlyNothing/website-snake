@@ -1,3 +1,11 @@
+/*
+ * Name: Bix Men
+ * Date: 01.25.2022
+ * Section: CSE 154 AG
+ * Handles the snake game loop. Things like setting up the board, moving the snake, spawning the
+ * apple and determining the gameover state.
+ */
+
 "use strict";
 (function() {
   const DEFAULT_TICK_SPEED = 150;
@@ -11,6 +19,7 @@
   const D_KEY = 68;
   const DOWN = 40;
   const S_KEY = 83;
+  const SPACE_KEY = 32;
   let tickSpeed = DEFAULT_TICK_SPEED;
   let moveDir = [0, 0];
   let playing = false;
@@ -31,7 +40,7 @@
    */
   function init() {
     id("start").addEventListener("click", onStartClick);
-    id("again").addEventListener("click", onStartClick);
+    id("again").addEventListener("click", onAgainClick);
     id("left").addEventListener("click", function() {
       setMoveDir([-1, 0]);
     });
@@ -161,6 +170,8 @@
       setMoveDir([1, 0]);
     } else if (event.keyCode === S_KEY || event.keyCode === DOWN) {
       setMoveDir([0, 1]);
+    } else if (event.keyCode === SPACE_KEY) {
+      onAgainClick();
     }
   }
 
@@ -200,10 +211,21 @@
   }
 
   /**
+   * Initiates play again.
+   */
+  function onAgainClick() {
+    let gameover = id("gameover");
+    if (gameover.classList.contains("hidden")) {
+      return;
+    }
+    gameover.classList.add("hidden");
+    onStartClick();
+  }
+
+  /**
    * Initiates playing board.
    */
   function onStartClick() {
-    id("gameover").classList.add("hidden");
     let width = id("width").value;
     let height = id("height").value;
     if (width === "" || height === "") {
@@ -221,7 +243,6 @@
       tickSpeedInput.value = DEFAULT_TICK_SPEED;
     }
     started = true;
-    lost = false;
     playing = false;
     snakeBody = [];
     initBoard(width, height);
