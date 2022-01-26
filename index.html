@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  Name: Bix Men
+  Date: 01.25.2022
+  Section: CSE 154 AG
+
+  DOJSDIFJOSDJOIFJSDIOJFOIJSIODJFOISDJ
+-->
+<html lang="en">
+<head>
+  <title>CP2</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Snake</h1>
+    <section id="options">
+      <div class="input-field">
+        <label for="width">Width</label>
+        <input type="number" min="10" step="1" id="width" value="21">
+      </div>
+      <div class="input-field">
+        <label for="height">Height</label>
+        <input type="number" min="10" step="1" id="height" value="19">
+      </div>
+      <div class="input-field">
+        <label for="tick-speed">Tick Speed</label>
+        <input type="number" min="10" step="1" id="tick-speed" value="150">
+      </div>
+      <button id="start">start</button>
+    </section>
+    <div id="snake-board"></div>
+    <section id="controls">
+      <p>WASD and arrow keys also work</p>
+      <div id="button-controls">
+        <button id="left">Left</button>
+        <div id="vertical-button-controls">
+          <button id="up">Up</button>
+          <button id="down">Down</button>
+        </div>
+        <button id="right">Right</button>
+      </div>
+    </section>
+    <section id="gameover" class="hidden">
+      <h1 id="gameover-title">You did it!</h1>
+      <p id="gameover-message">Quirky line</p>
+      <button id="again">Again</button>
+    </section>
+  </main>
+</body>
+</html>

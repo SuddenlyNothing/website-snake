@@ -1,0 +1,147 @@
+/**
+  Name: Bix Men
+  Date: 01.25.2022
+  Section: CSE 154 AG
+
+  DOJSDIFJOSDJOIFJSDIOJFOIJSIODJFOISDJ
+**/
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  padding: 0px 10px;
+  border-style: none none solid none;
+}
+
+body {
+  margin: 0;
+  color: rgb(241, 253, 251);
+}
+
+main {
+  background-color: rgb(39, 40, 41);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, button {
+  background-color: rgb(87, 92, 92);
+  color: rgb(241, 253, 251);
+}
+
+::placeholder {
+  color: rgb(196, 207, 205);
+}
+
+.input-field {
+  display: flex;
+}
+
+.input-field > * {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.snake-tile-container {
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.snake-tile {
+  background-color: rgb(165, 168, 184);
+  flex-grow: 1;
+  /* border: solid;
+  border-width: 0.1px;
+  border-color: rgb(67, 67, 71); */
+  box-shadow: 0 0 0.5px black;
+}
+
+.apple {
+  background-color: red;
+}
+
+.snake-body {
+  background-color: rgb(68, 119, 68);
+}
+
+.snake-head {
+  background-color: rgb(48, 83, 48);
+}
+
+#start {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+#options {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  text-align: center;
+}
+
+#snake-board {
+  background-color: rgb(130, 131, 136);
+  height: auto;
+  overflow: clip;
+  flex-grow: 1;
+  margin: 10px;
+  box-shadow: 0px 3px 10px rgb(101, 103, 107);
+  border: solid;
+  border-color: rgb(56, 76, 94);
+  display: flex;
+  flex-direction: column;
+}
+
+#controls {
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  text-align: center;
+}
+
+#button-controls {
+  display: flex;
+  height: 100px;
+  width: 300px;
+}
+
+#button-controls > * {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+#vertical-button-controls {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 130%;
+}
+
+#vertical-button-controls > * {
+  flex-grow: 1;
+}
+
+#gameover {
+  background-color: rgba(60, 64, 73, 0.671);
+  padding: 25px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#again, #start {
+  width: 150px;
+  height: 50px;
+}
