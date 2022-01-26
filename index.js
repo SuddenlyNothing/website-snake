@@ -162,6 +162,7 @@
    * @param {Object} event - input event
    */
   function inputSetMoveDir(event) {
+    console.log(event.keyCode);
     if (event.keyCode === A_KEY || event.keyCode === LEFT) {
       setMoveDir([-1, 0]);
     } else if (event.keyCode === W_KEY || event.keyCode === UP) {
