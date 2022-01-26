@@ -214,11 +214,9 @@
    * Initiates play again.
    */
   function onAgainClick() {
-    let gameover = id("gameover");
-    if (gameover.classList.contains("hidden")) {
+    if (id("gameover").classList.contains("hidden")) {
       return;
     }
-    gameover.classList.add("hidden");
     onStartClick();
   }
 
@@ -226,6 +224,7 @@
    * Initiates playing board.
    */
   function onStartClick() {
+    id("gameover").classList.add("hidden");
     let width = id("width").value;
     let height = id("height").value;
     if (width === "" || height === "") {
